@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+        font-family: 'Segoe UI', Arial, sans-serif;
+    position: fixed;
+    top:0;
+     width: 100%;
+    background-color: #054E70;
+}
+ul{
+ 
+    list-style-type: none;
+    overflow: hidden;
+    position: relative;
+    float: right ;
+    right: 40px;
+    
+
+}
+.menu_h{
+    position: fixed;
+    margin-left: 80%;
+   
+    right: 35px;
+    background-color: aqua;
+    opacity: 0;
+}
+
+ #btn{
+    visibility: hidden;
+   position: fixed;
+   top:0;
+    right: 30px;
+   float: right;
+   opacity: 0;
+
+  
+ color: darkgoldenrod;
+ width: 40px;
+ height: 50px;
+}
+li{
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  
+   
+}
+li a{
+    text-decoration: none;
+   padding: 14px;
+    color:#fff;
+    font-size: 15.2px;
+    text-transform: uppercase;
+}
+aside{
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+@media (max-width:1000px){
+    nav{
+        height: 61px;;
+    }
+    #btn{
+        visibility: visible;
+        opacity: 1;
+
+    }
+  
+ul{
+    display: none;
+}
+   li{
+   
+        opacity: 0;
+    }
+
+    aside{
+        
+  
+      display: flex;
+   opacity: 0;
+    position: fixed;
+    right: 0;
+    top:0;
+     width: 50%;
+     height: 100%;
+    
+    background-color:  #054E70;
+    overflow-y: auto;
+}
+#lateral{
+    position: relative;
+    margin-top: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    
+
+     color: black;
+   
+
+}
+#flecha{
+    position: fixed;
+   top:30px;
+   right: 10px;
+}
+a{
+    
+    margin-left: 30px;
+    font-size: 15.2px;
+    margin-bottom: 20px;
+    color:black;
+    text-decoration: none;
+    text-transform: uppercase;
+    
+}
+a:hover{
+    background-color:#E7FCFE;
+  width: 100%;
+  height: 40px;
+   color: black;
+   display: flex;
+   align-items: center;
+
+
+  
+}
+
+
+}
+
+
+
+
+
+
+

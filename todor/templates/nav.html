@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="{{url_for('static',filename='nav.css')}}">
+    <title>nav</title>
+</head>
+<body>
+    <nav>
+    <ul id="t">
+        <li><a href="">Consultas</a></li>
+        <li><a href="">INSERCIONES</a></li>
+        <li><a href="">ACTUALIZACIONES</a></li>
+        <li><a href="">BORRADO</a></li>
+      
+    </ul>
+
+    <p id="btn" onclick="presiona()" > 
+        <svg  xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
+	<path d="M0 0h24v24H0z" fill="none" />
+	<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.72 5.19h18.56M2.72 11.94h18.56M2.72 18.81h18.56" />
+   
+</svg>
+</p>
+
+
+    </nav>
+
+     
+         <aside id="gen" class="otro">
+
+<div id="lateral">
+     <p id="flecha" onclick="regresa();">
+    <svg xmlns="http://www.w3.org/2000/svg" width="4em" height="4em" viewBox="0 0 512 512">
+	<path d="M0 0h512v512H0z" fill="none" />
+	<path fill="none" stroke="currentColor" stroke-linecap="square" stroke-miterlimit="10" stroke-width="48" d="M244 400L100 256l144-144M120 256h292" />
+</svg>
+
+   </p>
+          <a href="">Consultas</a>
+        <a href="">INSERCIONES</a>
+        <a href="">ACTUALIZACIONES</a>
+        <a href="">BORRADO</a>
+</div>
+       
+   
+      
+ 
+       </aside>
+
+    <div>
+       
+    </div>
+<script  src="{{url_for('static',filename='nav.js')}}">
+
+</script>
+</body>
+</html>

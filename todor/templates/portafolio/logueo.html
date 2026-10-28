@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logueo de Usuario</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f2f5;
+            margin: 0;
+        }
+
+        /* NAVBAR */
+        nav {
+            background: #212529;
+            padding: 12px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            left: 0;
+            z-index: 10;
+        }
+
+        .nav-left {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .nav-right {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-right a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: .2s;
+        }
+
+        .nav-right a:hover {
+            color: #0d6efd;
+        }
+
+        .nav-inline-text {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        /* CARD */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding-top: 60px; /* espacio por el navbar */
+        }
+
+        .card {
+            background: #fff;
+            width: 350px;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .card h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #444;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            background: #007bff;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: .2s;
+        }
+
+        .btn:hover {
+            background: #005fcc;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-left" >Todo list</div>
+
+        <div class="nav-right">
+            <a href="{{url_for('todo.inicio')}}">Inicio</a>
+            <a href="#">Registrarse</a>
+            <a href="">Iniciar Sesión</a>
+            <span class="nav-inline-text">Navbar text with an inline element</span>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <h2>Inicio de Sesión</h2>
+
+            <form>
+                <div class="input-group">
+                    <label>Nombre</label>
+                    <input type="text" placeholder="Ingresa tu nombre" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Correo</label>
+                    <input type="email" placeholder="correo@ejemplo.com" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="••••••••" required>
+                </div>
+
+                <button class="btn" type="submit">Registrar</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

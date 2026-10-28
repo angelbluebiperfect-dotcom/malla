@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='tablas.css')}}">
+    <title>Malla Curricular</title>
+</head>
+<body>
+{% include 'nav.html' %}
+
+    {% block contenido %}
+    {% endblock %} 
+    <form action="/todo/register" method="post">
+
+    <div class="caja">
+    <div class="caja_">
+  <label for="consulta1">Escribe la consulta para ver informacion sobre las academias</label>
+    </div>
+    <div class="caja_" id="t">
+   <label id="p1">
+    {{ texto }}
+
+
+   </label>
+    </div>
+    <div class="caja_">
+ <input type="text" id="consulta1" name="consulta1">
+    </div>
+    
+      <div id="t1" class="caja_" >
+   <table id="tb1">
+        <tbody><tr>
+            <th>MATRICULA</th>
+            <th>ACADEMIA</th>
+            <th>FK_ID</th>
+        </tr>
+     {% for i in academia_ %}
+        <tr>
+            <td>{{i.MATRICULA}}</td>
+            <td>{{i.ACADEMIA}}</td>
+            <td>{{i.FK_ID}}</td>
+        </tr>
+        {% endfor %}
+    </tbody></table>
+  </div>
+    <div class="caja_">
+  
+    <button type="submit">Consultar</button>
+    </div>
+
+
+      <div class="caja_">
+  <label for="consulta2">Escribe la consulta para ver informacion sobre la carrera</label>
+    </div>
+    <div class="caja_" id="t">
+   <label id="p2">
+    {{ texto_ }}
+
+
+   </label>
+    </div>
+    <div class="caja_">
+ <input type="text" id="consulta2" name="consulta2">
+    </div>
+
+    
+      <div id="t2" class="caja_" >
+   <table id="tb2">
+     
+        <tbody><tr>
+            <th>CLAVE</th>
+            <th>CARRERA</th>
+            <th>PLAN_N</th>
+            <th>NUM_CREDITOS</th>
+            <th>SUM_HORAS_TEORIA</th>
+            <th>SUM_HORAS_PRACTICA</th>
+            <th>NUM_SEMESTRES</th>
+        </tr>
+     {% for i in carrera_ %}
+        <tr>
+            <td>{{i.CLAVE}}</td>
+            <td>{{i.CARRERA}}</td>
+            <td>{{i.PLAN_N}}</td>
+            <td>{{i.NUM_CREDITOS}}</td>
+            <td>{{i.SUM_HORAS_TEORIA}}</td>
+            <td>{{i.SUM_HORAS_PRACTICA}}</td>
+            <td>{{i.NUM_SEMESTRES}}</td>
+        </tr>
+        {% endfor %}
+    </tbody></table>
+  </div>
+    <div class="caja_">
+  
+    <button type="submit">Consultar</button>
+    </div>
+
+
+
+    <div class="caja_">
+  <label for="consulta3">Escribe la consulta para ver las diferentes materias</label>
+    </div>
+    <div class="caja_" id="t">
+   <label id="p3">
+    {{ texto__ }}
+
+
+   </label>
+    </div>
+    <div class="caja_">
+ <input type="text" id="consulta3" name="consulta3">
+    </div>
+
+    
+      <div id="t3" class="caja_" >
+<table id="tb3">
+     
+        <tbody><tr>
+            <th>CLAVE_ASIGNATURA</th>
+            <th>CLAVE</th>
+            <th>ASIGNATURA</th>
+            <th>SEMESTRE</th>
+            <th>CREDITOS</th>
+            <th>HORAS_T</th>
+            <th>HORAS_P</th>
+            <th>MAT_ACADEMIA</th>
+        </tr>
+     {% for i in datos_carrera_  %}
+        <tr>
+            <td>{{i.CLAVE_ASIGNATURA}}</td>
+            <td>{{i.CLAVE}}</td>
+            <td>{{i.ASIGNATURA}}</td>
+            <td>{{i.SEMESTRE}}</td>
+            <td>{{i.CREDITOS}}</td>
+            <td>{{i.HORAS_T}}</td>
+            <td>{{i.HORAS_P}}</td>
+            <td>{{i.MAT_ACADEMIA}}</td>
+        </tr>
+        {% endfor %}
+    </tbody></table>
+  </div>
+    <div class="caja_">
+  
+    <button type="submit">Consultar</button>
+    </div>
+
+
+
+     <div class="caja_">
+  <label for="consulta4">Escribe la consulta para ver las diferentes ramas de tu carrera</label>
+    </div>
+    <div class="caja_" id="t">
+   <label id="p4">
+    {{ texto___ }}
+
+
+   </label>
+    </div>
+    <div class="caja_">
+ <input type="text" id="consulta4" name="consulta4">
+    </div>
+
+    
+      <div id="t4" class="caja_" >
+   <table id="tb4">
+        <tbody><tr>
+            <th>ID</th>
+            <th>NOMBRE_RAMA</th>
+            <th>CLAVE</th>
+            <th>NUM_SEMESTRES</th>
+        </tr>
+     {% for i in ramas_ %}
+        <tr>
+            <td>{{i.ID}}</td>
+            <td>{{i.NOMBRE_RAMA}}</td>
+            <td>{{i.CLAVE}}</td>
+            <td>{{i.NUM_SEMESTRES}}</td>
+         
+        </tr>
+        {% endfor %}
+    </tbody></table>
+  </div>
+    <div class="caja_">
+  
+    <button type="submit">Consultar</button>
+    </div>
+
+
+    
+
+     <div class="caja_">
+  <label for="consulta5">Escribe la consulta para ver las diferentes optativas de tu carrera</label>
+    </div>
+    <div class="caja_" id="t">
+   <label id="p5">
+    {{ texto_o }}
+
+
+   </label>
+    </div>
+    <div class="caja_">
+ <input type="text" id="consulta5" name="consulta5">
+    </div>
+
+    
+      <div id="t5" class="caja_" >
+   <table id="tb5">
+        <tbody><tr>
+            <th>FK</th>
+            <th>CLAVE_ASIGNATURA</th>
+            <th>SEMESTRE_CURSE</th>
+  
+        </tr>
+     {% for i in ramas_o %}
+        <tr>
+            <td>{{i.FK}}</td>
+            <td>{{i.CLAVE_ASIGNATURA}}</td>
+            <td>{{i.SEMESTRE_CURSE}}</td>
+         
+         
+        </tr>
+        {% endfor %}
+    </tbody></table>
+  </div>
+    <div class="caja_">
+  
+    <button type="submit">Consultar</button>
+    </div>
+    
+  
+
+ </div>
+
+
+</form>
+
+   
+
+<script src="{{url_for('static',filename='js.js')}}">
+
+</script>
+
+</body>
+</html>

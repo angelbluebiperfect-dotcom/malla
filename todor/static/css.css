@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+
+    background-color: #BBEFFC
+}
+
+.caja{
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+    height:max-content;
+   margin-top: 100px;
+     align-items: center;
+  justify-content: center;
+  /* background-color: blue; */
+}
+
+.caja_{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 15px;
+    margin-bottom: 30px;
+    
+ 
+ 
+}
+
+#t1, #t2,#t3,#t4,#t5{
+    height: 30px;
+   
+  
+}
+#p1,#p2,#p3,#p4,#p5{
+    opacity: 0;
+}
+#t{
+    margin-bottom: 5px;
+}
+
+.caja_ label{
+    margin-left: 40%;
+    width: 180px;
+}
+.caja_ button{
+    /* background-color: blue; */
+    background-color: #09A2C8;
+    border-radius: 4px;
+    width: 100px;
+    margin-left: 45%;
+}
